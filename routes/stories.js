@@ -145,7 +145,7 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
         })
         
     } catch (err) {
-        console.log(err);
+        console.error(err);
         res.render('error/500')
     }
 
