@@ -43,7 +43,7 @@ if(process.env.NODE_ENV == 'development') {
 
 //handlebar helpers
 const { formatDate, truncate, stripTags, editIcon, select } = require('./helpers/hbs')
-const { listenerCount } = require('./models/user')
+// const { listenerCount } = require('./models/user')
 
 //Handlebars
 app.engine('.hbs', exphbs({ helpers: {
@@ -77,7 +77,7 @@ app.use(function(req, res, next) {
 })
 
 //static folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, './public')))
 
 //Routes
 app.use('/', require('./routes/index'))
